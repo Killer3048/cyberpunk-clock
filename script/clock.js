@@ -44,7 +44,7 @@ const copyTime = () => {
             tooltipCopyBtn.textContent = 'Copied';
             setTimeout(() => {
                 tooltipCopyBtn.textContent = 'Copy';
-            }, 2000);
+            }, 600);
         })
         .catch(err => console.error('Could not copy time: ', err));
 };
