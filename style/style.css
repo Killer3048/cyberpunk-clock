@@ -1,0 +1,170 @@
+.page {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(70, 70, 70);
+    max-width: 4156px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock {
+    max-width: 100%;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff;
+    font-family: 'Press Start 2P', sans-serif;
+    transition: all 0.5s ease-in-out;
+    /* box-shadow: 0 0 30px rgba(0, 255, 255, 0.8); */
+}
+
+.clock__hours,
+.clock__minutes,
+.clock__seconds {
+    position: relative;
+    display: inline-block;
+}
+
+.clock__checked {
+    padding: 0;
+    margin: 0;
+}
+
+.clock__showedButton {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.tooltip {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    bottom: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    padding: 0.2em 1em;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    border-radius: 5px;
+    font-size: 0.8em;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.tooltip__close {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    top: -25%;
+    right: -20%;
+    cursor: pointer;
+    color: #0ff;
+    font-size: 2rem;
+}
+
+.clock:hover {
+    transform: translateZ(30px);
+    /* box-shadow: 0 0 60px rgba(0, 255, 255, 1); */
+}
+
+.tooltip__date {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.tooltip__timezone {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.tooltip__actions {
+    margin-top: 1em;
+    text-align: center;
+}
+
+.tooltip__button {
+    background-color: #0ff;
+    border: none;
+    color: #fff;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.tooltip__button:hover {
+    background-color: #00bfff;
+}
+
+@media (max-width: 767px) {
+    .clock {
+        font-size: 2.5rem;
+    }
+    .tooltip {
+        font-size: 0.75rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .clock {
+        font-size: 4rem;
+    }
+    .tooltip {
+        font-size: 0.875rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .clock {
+        font-size: 6rem;
+    }
+    .tooltip {
+        font-size: 2rem;
+    }
+    .tooltip__close {
+        top: -15%;
+        right: -15%;
+    }
+    .tooltip__button {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 567px) {
+    .clock {
+        font-size: 2.1rem;
+        gap: 10px;
+    }
+    .tooltip {
+        bottom: 70%;
+    }
+    .tooltip__date {
+        font-size: 1.5rem;
+    }
+    .tooltip__timezone {
+        font-size: 1.5rem;
+    }
+    .clock__showedButton {
+        background-color: #0ff;
+        border: none;
+        color: #fff;
+        padding: 0.5em 1em;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        margin: 50px;
+        opacity: 1;
+        visibility: visible;
+    }
+}

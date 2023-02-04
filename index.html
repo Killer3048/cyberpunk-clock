@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css">
+
+</head>
+
+<body class="page">
+    <div class="clock">
+        <div class="clock__hours"></div>
+        <div class="clock__checked">:</div>
+        <div class="clock__minutes"></div>
+        <div class="clock__checked">:</div>
+        <div class="clock__seconds"></div>
+    </div>
+    <button class="clock__showedButton">Click for show tooltip</button>
+    <div class="tooltip">
+        <p class="tooltip__date"></p>
+        <p class="tooltip__timezone"></p>
+        <p class="tooltip__actions">
+            <button class="tooltip__button">Copy</button>
+            <button class="tooltip__button">Refresh</button>
+        </p>
+        <button class="tooltip__close">✖</button>
+    </div>
+    <script src="./script/clock.js"></script>
+</body>
+
+</html>
