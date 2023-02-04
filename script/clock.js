@@ -58,7 +58,7 @@ const hideTooltip = () => {
     tooltip.style.opacity = 'hidden';
 };
 
-clock.addEventListener('mouseout', () => {
+clock.addEventListener('mousemove', () => {
     tooltip.style.opacity = '1';
     tooltip.style.visibility = 'visible'
     setTimeout(hideTooltip, 1000);
