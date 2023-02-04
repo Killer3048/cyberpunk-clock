@@ -10,6 +10,11 @@ const tooltipCopyBtn = tooltip.querySelector('.tooltip__button:first-child');
 const tooltipRefreshBtn = tooltip.querySelector('.tooltip__button:last-child');
 const tooltipShow = document.querySelector('.clock__showedButton');
 
+
+const addZero = value => value < 10 ? `0${value}` : value;
+
+
+
 const updateClock = () => {
     const date = new Date();
     const hoursValue = date.getHours();
@@ -20,8 +25,6 @@ const updateClock = () => {
     minutes.textContent = addZero(minutesValue);
     seconds.textContent = addZero(secondsValue);
 };
-
-const addZero = value => value < 10 ? `0${value}` : value;
 
 const updateTooltip = () => {
     const date = new Date();
